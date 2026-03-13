@@ -1,0 +1,48 @@
+# Environment & secrets
+.env
+.env.local
+.env.production
+
+# Telethon sessions (contains auth keys — NEVER commit)
+*.session
+*.session-journal
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Data files (runtime generated)
+data/
+
+# Test scripts (dev only)
+test_*.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Tools — API keys (runtime generated)
+tools/helius_keys.json
+tools/moralis_keys.json
+tools/*.json
+tools/*.png
+tools/.dune_chrome_profile/
+
+# Database
+*.db
+
+# Misc
+nul
