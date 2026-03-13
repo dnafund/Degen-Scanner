@@ -7,8 +7,14 @@ Each chunk stays ≤ 3800 chars (Telegram limit 4096 with margin).
 
 from typing import List
 
-from alerter import shorten_wallet
 from dev_tracer import TraceResult, DevCluster
+
+
+def shorten_wallet(wallet: str) -> str:
+    """Shorten a wallet address for display: 9hqf...BYuu"""
+    if len(wallet) <= 12:
+        return wallet
+    return f"{wallet[:4]}...{wallet[-4:]}"
 
 # Cluster type labels
 CLUSTER_TYPE_LABELS = {
